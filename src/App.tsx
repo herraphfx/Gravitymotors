@@ -76,9 +76,9 @@ function App() {
             <h1 className="company-name">Gravity Motors</h1>
           </div>
           <div className="address-info">
-            <p className="address-line">3591 Stone Mountain Highway 78 W</p>
-            <p className="address-line">Snellville, GA 30039 📍 Map</p>
-            <p className="address-line">Sales & Service: 770-982-3733</p>
+            <p className="address-line">4040 Jonesboro Road</p>
+            <p className="address-line">Forest Park, GA 30297 📍 Map</p>
+            <p className="address-line">Sales & Service: 404-254-4131</p>
           </div>
         </div>
       </header>
@@ -125,7 +125,7 @@ function App() {
             <Link to="/get-pre-qualified" className="dropdown-item">GET PRE-QUALIFIED</Link>
           </div>
         </div>
-        <Link to="/shop-from-home" className="nav-link">SHOP FROM HOME</Link>
+        <Link to="/view-all" className="nav-link">SHOP FROM HOME</Link>
         <Link to="/services" className="nav-link">SERVICES</Link>
         <Link to="/about-us" className="nav-link">ABOUT US</Link>
       </nav>
@@ -165,7 +165,7 @@ function App() {
           </div>
         </div>
 
-        <Link to="/shop-from-home" className="mobile-nav-link" onClick={closeMobileMenu}>SHOP FROM HOME</Link>
+        <Link to="/view-all" className="mobile-nav-link" onClick={closeMobileMenu}>SHOP FROM HOME</Link>
         <Link to="/services" className="mobile-nav-link" onClick={closeMobileMenu}>SERVICES</Link>
         <Link to="/about-us" className="mobile-nav-link" onClick={closeMobileMenu}>ABOUT US</Link>
         <Link to="/map-and-hours" className="mobile-nav-link" onClick={closeMobileMenu}>MAP AND HOURS</Link>
@@ -307,7 +307,7 @@ function App() {
         <h2>GET IN TOUCH</h2>
         <div className="map-container">
           <iframe 
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3308.7!2d-84.0!3d33.9!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMzPCsDU0JzAwLjAiTiA4NMKwMDAnMDAuMCJX!5e0!3m2!1sen!2sus!4v1234567890"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3313.2!2d-84.3544!3d33.6562!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88f51cedf7c5c3c5%3A0x0!2s4040%20Jonesboro%20Rd%2C%20Forest%20Park%2C%20GA%2030297!5e0!3m2!1sen!2sus!4v1234567890"
             width="100%"
             height="400"
             style={{ border: 0 }}
@@ -323,15 +323,15 @@ function App() {
         <div className="footer-content">
           <div className="footer-section">
             <h3>GRAVITY MOTORS</h3>
-            <p>3591 Stone Mountain Highway 78 W</p>
-            <p>Snellville, GA 30039</p>
-            <p>Sales: 770-982-3733</p>
+            <p>4040 Jonesboro Road</p>
+            <p>Forest Park, GA 30297</p>
+            <p>Sales: 404-254-4131</p>
            
           </div>
           <div className="footer-section">
             <h3>ABOUT US</h3>
-            <p>Our name says it all at Gravity Motors Inc. We are the source in the Snellville area for car shoppers looking for an impressive selection of high-line pre-owned vehicles. We have a wide variety of luxury cars in different makes and models, all offered at the best price possible. We offer models from all of the top high-line names: Mercedes, BMW, Audi, Cadillac, Land Rover, Jaguar, Infiniti, Audi, Porsche, Tesla and many more.</p>
-            <p style={{ marginTop: '15px' }}>If you are looking to upgrade your current car to something with a little more style, Gravity Motors Inc is here to help. Take a look at our inventory to learn more about everything we have to offer our Snellville customers.</p>
+            <p>Our name says it all at Gravity Motors Inc. We are the source in the Forest Park area for car shoppers looking for an impressive selection of high-line pre-owned vehicles. We have a wide variety of luxury cars in different makes and models, all offered at the best price possible. We offer models from all of the top high-line names: Mercedes, BMW, Audi, Cadillac, Land Rover, Jaguar, Infiniti, Audi, Porsche, Tesla and many more.</p>
+            <p style={{ marginTop: '15px' }}>If you are looking to upgrade your current car to something with a little more style, Gravity Motors Inc is here to help. Take a look at our inventory to learn more about everything we have to offer our Forest Park customers.</p>
           </div>
           <div className="footer-section">
             <h3>HOURS OF OPERATION</h3>

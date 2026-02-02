@@ -118,7 +118,7 @@ function CurrentSpecials() {
 
         <div className="contact-cta">
           <h3>Questions About Our Specials?</h3>
-          <p>Call us at <strong>770-982-3733</strong> or visit our showroom today!</p>
+          <p>Call us at <strong>404-254-4131</strong> or visit our showroom today!</p>
         </div>
       </div>
       </div>

@@ -92,7 +92,7 @@ function ShopFromHome() {
               <span className="benefit-icon">📱</span>
               <h4>Text or Call</h4>
               <p>Prefer to talk? Our team is available by phone or text</p>
-              <p><strong>770-982-3733</strong></p>
+              <p><strong>404-254-4131</strong></p>
             </div>
             <div className="benefit-box">
               <span className="benefit-icon">💬</span>

@@ -66,9 +66,9 @@ function Layout({ children }: LayoutProps) {
             </Link>
           </div>
           <div className="address-info">
-            <p className="address-line">3591 Stone Mountain Highway 78 W</p>
-            <p className="address-line">Snellville, GA 30039 📍 Map</p>
-            <p className="address-line">Sales & Service: 770-982-3733</p>
+            <p className="address-line">4040 Jonesboro Road</p>
+            <p className="address-line">Forest Park, GA 30297 📍 Map</p>
+            <p className="address-line">Sales & Service: 404-254-4131</p>
           </div>
         </div>
       </header>
@@ -115,7 +115,7 @@ function Layout({ children }: LayoutProps) {
             <Link to="/get-pre-qualified" className="dropdown-item">GET PRE-QUALIFIED</Link>
           </div>
         </div>
-        <Link to="/shop-from-home" className="nav-link">SHOP FROM HOME</Link>
+        <Link to="/view-all" className="nav-link">SHOP FROM HOME</Link>
         <Link to="/services" className="nav-link">SERVICES</Link>
         <Link to="/about-us" className="nav-link">ABOUT US</Link>
       </nav>
@@ -155,7 +155,7 @@ function Layout({ children }: LayoutProps) {
           </div>
         </div>
 
-        <Link to="/shop-from-home" className="mobile-nav-link" onClick={closeMobileMenu}>SHOP FROM HOME</Link>
+        <Link to="/view-all" className="mobile-nav-link" onClick={closeMobileMenu}>SHOP FROM HOME</Link>
         <Link to="/services" className="mobile-nav-link" onClick={closeMobileMenu}>SERVICES</Link>
         <Link to="/about-us" className="mobile-nav-link" onClick={closeMobileMenu}>ABOUT US</Link>
       </nav>
@@ -168,18 +168,14 @@ function Layout({ children }: LayoutProps) {
         <div className="footer-content">
           <div className="footer-section">
             <h3>GRAVITY MOTORS</h3>
-            <p>3591 Stone Mountain Highway 78 W</p>
-            <p>Snellville, GA 30039</p>
-            <p>Sales: 770-982-3733</p>
-            <div className="footer-badges">
-              <img src="https://via.placeholder.com/60x40/4A90E2/FFFFFF?text=BBB" alt="BBB Accredited" />
-              <img src="https://via.placeholder.com/60x40/0066CC/FFFFFF?text=Dealer" alt="Dealer Badge" />
-            </div>
+            <p>4040 Jonesboro Road</p>
+            <p>Forest Park, GA 30297</p>
+            <p>Sales: 404-254-4131</p>
           </div>
           <div className="footer-section">
             <h3>ABOUT US</h3>
-            <p>Our name says it all at Gravity Motors Inc. We are the source in the Snellville area for car shoppers looking for an impressive selection of high-line pre-owned vehicles. We have a wide variety of luxury cars in different makes and models, all offered at the best price possible. We offer models from all of the top high-line names: Mercedes, BMW, Audi, Cadillac, Land Rover, Jaguar, Infiniti, Audi, Porsche, Tesla and many more.</p>
-            <p style={{ marginTop: '15px' }}>If you are looking to upgrade your current car to something with a little more style, Gravity Motors Inc is here to help. Take a look at our inventory to learn more about everything we have to offer our Snellville customers.</p>
+            <p>Our name says it all at Gravity Motors Inc. We are the source in the Forest Park area for car shoppers looking for an impressive selection of high-line pre-owned vehicles. We have a wide variety of luxury cars in different makes and models, all offered at the best price possible. We offer models from all of the top high-line names: Mercedes, BMW, Audi, Cadillac, Land Rover, Jaguar, Infiniti, Audi, Porsche, Tesla and many more.</p>
+            <p style={{ marginTop: '15px' }}>If you are looking to upgrade your current car to something with a little more style, Gravity Motors Inc is here to help. Take a look at our inventory to learn more about everything we have to offer our Forest Park customers.</p>
           </div>
           <div className="footer-section">
             <h3>HOURS OF OPERATION</h3>

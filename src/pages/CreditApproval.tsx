@@ -116,10 +116,10 @@ function CreditApproval() {
       <div className="credit-application-page">
         <div className="credit-app-header">
           <div className="company-info-header">
-            <div className="company-name-header">AMAZING LUXURY CARS</div>
-            <div className="company-address-header">3591 Stone Mountain Highway 78 W, Snellville, GA 30039</div>
+            <div className="company-name-header">GRAVITY MOTORS</div>
+            <div className="company-address-header">4040 Jonesboro Road, Forest Park, GA 30297</div>
           </div>
-          <div className="company-phone-header">PHONE: 770-982-3733</div>
+          <div className="company-phone-header">PHONE: 404-254-4131</div>
         </div>
 
         <div className="credit-app-title">
@@ -897,7 +897,7 @@ function CreditApproval() {
           <div className="form-section-credit">
             <div className="terms-box">
               <p className="terms-text">
-                In submitting this credit application, I/We certify that the information provided on this application is, to the best of my/our knowledge, complete and accurate. I/We understand that false or misleading information may result in the denial of credit and employment termination. In conjunction with what they may already have obtained from any or all consumer reporting agencies, I/We understand that false statements may subject me/us to criminal prosecution. I/We further understand that this application is not a contract or commitment to extend credit. I/We authorize Amazing Luxury Cars Inc. to obtain credit reports and employment verification of me/us and any co-applicant. I/We understand that Amazing Luxury Cars Inc. may retain this application whether or not it is approved. I/We authorize Amazing Luxury Cars Inc. to investigate all statements in this application and to obtain any additional information Amazing Luxury Cars Inc. may deem necessary in connection with this application.
+                In submitting this credit application, I/We certify that the information provided on this application is, to the best of my/our knowledge, complete and accurate. I/We understand that false or misleading information may result in the denial of credit and employment termination. In conjunction with what they may already have obtained from any or all consumer reporting agencies, I/We understand that false statements may subject me/us to criminal prosecution. I/We further understand that this application is not a contract or commitment to extend credit. I authorize Gravity Motors Inc. to obtain credit reports and employment verification of me/us and any co-applicant. I/We understand that Gravity Motors Inc. may retain this application whether or not it is approved. I/We authorize Gravity Motors Inc. to investigate all statements in this application and to obtain any additional information Gravity Motors Inc. may deem necessary in connection with this application.
               </p>
             </div>
 
@@ -912,7 +912,7 @@ function CreditApproval() {
                     onChange={handleChange}
                     required
                   />
-                  I agree to the terms and conditions of this application and give permission to Amazing Luxury Cars to run an automotive credit check on my behalf.
+                  I agree to the terms and conditions of this application and give permission to Gravity Motors to run an automotive credit check on my behalf.
                 </label>
               </div>
               <div className="checkbox-agreement">
@@ -924,7 +924,7 @@ function CreditApproval() {
                     onChange={handleChange}
                     required
                   />
-                  By submitting this form I understand that Amazing Luxury Cars may contact me with offers or information about their products and services.
+                  By submitting this form I understand that Gravity Motors may contact me with offers or information about their products and services.
                 </label>
               </div>
             </div>

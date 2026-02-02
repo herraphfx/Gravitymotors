@@ -152,7 +152,7 @@ function ViewAll() {
       <div className="inventory-page">
         <div className="inventory-header">
           <h1>159 USED VEHICLES FOR SALE</h1>
-          <p>SNELLVILLE, GA</p>
+          <p>FOREST PARK, GA</p>
         </div>
 
         <div className="inventory-controls">
@@ -329,9 +329,8 @@ function ViewAll() {
                   </div>
 
                      <div className="action-buttons">
-                    <button className="btn-action btn-details">770-982-3733</button>
+                    <button className="btn-action btn-details">404-254-4131</button>
                     <button className="btn-action btn-email">Apply Now</button>
-                    <button className="btn-action btn-schedule">Schedule Test Drive</button>
                     <button className="btn-action btn-request">Request More Info</button>
                   </div>
                 </div>
@@ -344,12 +343,11 @@ function ViewAll() {
                     </div>
                     <div className="contact-info">
                       <p>Call Us</p>
-                      <p className="phone-number">770-982-3733</p>
+                      <p className="phone-number">404-254-4131</p>
                     </div>
                   </div>
 
-               
-
+              
                   <div className="additional-actions">
                     <button className="btn-link">Estimate payment</button>
                     <button className="btn-link">Get pre-approved</button>

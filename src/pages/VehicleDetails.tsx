@@ -162,7 +162,7 @@ function VehicleDetails() {
           <div className="vehicle-price-section">
             <p className="retail-price">Retail Price</p>
             <h2 className="price">${vehicle.price.toLocaleString()}</h2>
-            <p className="phone-number">770-982-3733</p>
+            <p className="phone-number">404-254-4131</p>
             <button className="get-preapproved-btn">Get Preapproved</button>
           </div>
         </div>
@@ -173,7 +173,7 @@ function VehicleDetails() {
           <div className="vehicle-images-section">
             {/* Action Buttons */}
             <div className="action-buttons">
-              <button className="action-btn">770-982-3733</button>
+              <button className="action-btn">404-254-4131</button>
               <button className="action-btn">Apply Now</button>
               <button className="action-btn">Schedule Test Drive</button>
               <button className="action-btn">Request More Info</button>

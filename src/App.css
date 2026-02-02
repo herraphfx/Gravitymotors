@@ -254,7 +254,7 @@ body {
 
 /* Main Navigation */
 .main-nav {
-  background-color: #e31e24;
+  background: linear-gradient(135deg, #E31E24 0%, #C41A1F 100%);
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -1086,7 +1086,7 @@ body {
 .inventory-search-section h2 {
   font-size: 28px;
   margin-bottom: 25px;
-  color: #8B7355;
+  color: #000000;
 }
 
 .search-filters {
@@ -1226,7 +1226,7 @@ body {
 
 .form-intro h2 {
   font-size: 32px;
-  color: #8B7355;
+  color: #000000;
   margin-bottom: 15px;
 }
 
@@ -1307,7 +1307,7 @@ body {
 
 .info-card h3 {
   font-size: 20px;
-  color: #8B7355;
+  color: #000000;
   margin-bottom: 10px;
 }
 
@@ -1325,7 +1325,7 @@ body {
 
 .specials-intro h2 {
   font-size: 32px;
-  color: #8B7355;
+  color: #000000;
   margin-bottom: 15px;
 }
 
@@ -1490,7 +1490,7 @@ body {
 
 .contact-cta h3 {
   font-size: 24px;
-  color: #8B7355;
+  color: #000000;
   margin-bottom: 10px;
 }
 
@@ -1507,7 +1507,7 @@ body {
 
 .mpg-intro h2 {
   font-size: 32px;
-  color: #8B7355;
+  color: #000000;
   margin-bottom: 15px;
 }
 
@@ -1540,7 +1540,7 @@ body {
 
 .benefit-card h3 {
   font-size: 20px;
-  color: #8B7355;
+  color: #000000;
   margin-bottom: 10px;
 }
 
@@ -1600,7 +1600,7 @@ body {
 
 .fuel-calculator h2 {
   font-size: 28px;
-  color: #8B7355;
+  color: #000000;
   margin-bottom: 15px;
 }
 
@@ -1611,7 +1611,7 @@ body {
 }
 
 .btn-calculator {
-  background-color: #8B7355;
+  background-color: #e31e24;
   color: white;
   border: none;
   padding: 15px 40px;
@@ -1623,7 +1623,7 @@ body {
 }
 
 .btn-calculator:hover {
-  background-color: #7a6349;
+  background-color: #c41a1f;
 }
 
 /* Credit Approval & Finance Pages */
@@ -1640,7 +1640,7 @@ body {
 .calculator-intro h2,
 .prequalify-intro h2 {
   font-size: 32px;
-  color: #8B7355;
+  color: #000000;
   margin-bottom: 15px;
 }
 
@@ -1667,7 +1667,7 @@ body {
   padding: 15px 25px;
   border-radius: 8px;
   font-size: 14px;
-  color: #8B7355;
+  color: #000000;
   font-weight: bold;
 }
 
@@ -1685,7 +1685,7 @@ body {
 .form-section-title {
   font-size: 20px;
   font-weight: bold;
-  color: #8B7355;
+  color: #000000;
   margin: 30px 0 20px;
   padding-bottom: 10px;
   border-bottom: 2px solid #8B7355;
@@ -1717,7 +1717,7 @@ body {
 .credit-footer h3,
 .trade-info h3 {
   font-size: 24px;
-  color: #8B7355;
+  color: #000000;
   margin-bottom: 15px;
 }
 
@@ -1802,7 +1802,7 @@ body {
 
 .benefit-box h4 {
   font-size: 18px;
-  color: #8B7355;
+  color: #000000;
   margin-bottom: 10px;
 }
 
@@ -2099,7 +2099,7 @@ body {
 }
 
 .btn-primary {
-  background-color: #8B7355;
+  background-color: #e31e24;
   color: white;
   border: none;
   padding: 15px 40px;
@@ -2111,7 +2111,7 @@ body {
 }
 
 .btn-primary:hover {
-  background-color: #7a6349;
+  background-color: #c41a1f;
 }
 
 .btn-secondary {
@@ -2127,7 +2127,7 @@ body {
 }
 
 .btn-secondary:hover {
-  background-color: #8B7355;
+  background-color: #e31e24;
   color: white;
 }
 
@@ -2328,7 +2328,7 @@ body {
 
 .apply-btn {
   width: 100%;
-  background-color: #8B7355;
+  background-color: #e31e24;
   color: white;
   border: none;
   padding: 8px;
@@ -2340,12 +2340,12 @@ body {
 }
 
 .apply-btn:hover {
-  background-color: #7a6349;
+  background-color: #c41a1f;
 }
 
 .reset-filters-btn {
   width: 100%;
-  background-color: #E31E24;
+  background-color: #e31e24;
   color: white;
   border: none;
   padding: 12px;
@@ -2427,7 +2427,7 @@ body {
   position: absolute;
   bottom: 10px;
   right: 10px;
-  background-color: rgba(139, 115, 85, 0.9);
+  background-color: #e31e24;
   color: white;
   border: none;
   padding: 6px 12px;
@@ -2438,7 +2438,7 @@ body {
 }
 
 .compare-btn:hover {
-  background-color: #8B7355;
+  background-color: #e31e24;
 }
 
 .vehicle-listing-details {
@@ -2460,8 +2460,8 @@ body {
 
 .compare-link {
   background: none;
-  border: 1px solid #8B7355;
-  color: #8B7355;
+  border: 1px solid #e31e24;
+  color: #e31e24;
   padding: 5px 10px;
   font-size: 12px;
   cursor: pointer;
@@ -2470,7 +2470,7 @@ body {
 }
 
 .compare-link:hover {
-  background-color: #8B7355;
+  background-color: #e31e24;
   color: white;
 }
 
@@ -2538,7 +2538,7 @@ body {
   display: block;
   font-size: 28px;
   font-weight: bold;
-  color: #8B7355;
+  color: #151212;
 }
 
 .contact-info {
@@ -2556,11 +2556,13 @@ body {
 .action-buttons {
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 15px;
+  justify-content: space-between;
+
 }
 
 .btn-action {
-  width: 100%;
+  width: 150px;
   border: none;
   padding: 12px 15px;
   font-size: 13px;
@@ -2586,23 +2588,23 @@ body {
 }
 
 .btn-details {
-  background: linear-gradient(135deg, #8B7355 0%, #9B8B7E 100%);
+ background: linear-gradient(135deg, #E31E24 0%, #C41A1F 100%);
   color: white;
   border: 2px solid transparent;
 }
 
 .btn-details:hover {
-  background: linear-gradient(135deg, #7a6349 0%, #8a7a6d 100%);
+  background: linear-gradient(135deg, #a01519 0%, #7a0f13 100%);
 }
 
 .btn-email {
-  background: linear-gradient(135deg, #4A90E2 0%, #357ABD 100%);
+  background: linear-gradient(135deg, #E31E24 0%, #C41A1F 100%);
   color: white;
   border: 2px solid transparent;
 }
 
 .btn-email:hover {
-  background: linear-gradient(135deg, #3a7bc8 0%, #2a6aad 100%);
+  background: linear-gradient(135deg, #a01519 0%, #7a0f13 100%);
 }
 
 .btn-schedule {
@@ -2635,19 +2637,28 @@ body {
 }
 
 .btn-link {
-  background: none;
-  border: none;
-  color: #8B7355;
+  background: linear-gradient(135deg, #ffffff 0%, #f5f5f5 100%);
+  border: 2px solid #e31e24;
+  color: #e31e24;
   font-size: 12px;
-  text-decoration: underline;
+  font-weight: 600;
+  text-decoration: none;
   cursor: pointer;
-  text-align: left;
-  padding: 5px 0;
-  transition: color 0.3s;
+  text-align: center;
+  padding: 10px 15px;
+  transition: all 0.3s ease;
+  border-radius: 5px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .btn-link:hover {
-  color: #7a6349;
+  background: linear-gradient(135deg, #e31e24 0%, #c41a1f 100%);
+  color: white;
+  border-color: #e31e24;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(227, 30, 36, 0.3);
 }
 
 .inventory-pagination-bottom {
@@ -2733,7 +2744,7 @@ body {
 
 .section-heading {
   font-size: 18px;
-  color: #8B7355;
+  color: #000000;
   font-weight: bold;
   margin-bottom: 25px;
   padding-bottom: 10px;
@@ -2779,7 +2790,7 @@ body {
 }
 
 .btn-submit-testdrive {
-  background-color: #8B7355;
+  background-color: #e31e24;
   color: white;
   border: none;
   padding: 15px 60px;
@@ -2792,7 +2803,7 @@ body {
 }
 
 .btn-submit-testdrive:hover {
-  background-color: #7a6349;
+  background-color: #c41a1f;
 }
 
 /* Services Page */
@@ -2956,14 +2967,14 @@ body {
 }
 
 .hours-section {
-  background-color: #000;
-  color: white;
+  background-color: #f5f5f5;
+  color: #333;
   padding: 40px 30px;
 }
 
 .hours-section h3 {
   font-size: 16px;
-  color: #8B7355;
+  color: #333;
   font-weight: bold;
   margin-bottom: 25px;
   letter-spacing: 1px;
@@ -2976,17 +2987,18 @@ body {
 .hours-item {
   display: flex;
   justify-content: space-between;
-  padding: 8px 0;
+  padding: 12px 0;
   font-size: 14px;
-  border-bottom: 1px solid #333;
+  border-bottom: 1px solid #e0e0e0;
 }
 
 .hours-item span:first-child {
-  color: #ccc;
+  color: #666;
+  font-weight: 600;
 }
 
 .hours-item span:last-child {
-  color: white;
+  color: #333;
 }
 
 .hours-item .closed {
@@ -2996,24 +3008,24 @@ body {
 
 .service-contact {
   padding-top: 20px;
-  border-top: 1px solid #333;
+  border-top: 1px solid #e0e0e0;
 }
 
 .service-contact h4 {
   font-size: 16px;
-  color: #8B7355;
+  color: #000;
   margin-bottom: 10px;
   font-weight: bold;
 }
 
 .service-contact p {
   font-size: 13px;
-  color: #ccc;
+  color: #000;
   margin-bottom: 5px;
 }
 
 .service-contact strong {
-  color: white;
+  color: #000;
 }
 
 /* Credit Application Page */
@@ -3064,7 +3076,7 @@ body {
 
 .credit-app-title h1 {
   font-size: 24px;
-  color: #8B7355;
+  color: #000000;
   font-weight: normal;
   letter-spacing: 2px;
   margin: 0;
@@ -3250,7 +3262,7 @@ body {
 }
 
 .btn-submit-credit {
-  background-color: #8B7355;
+  background-color: #e31e24;
   color: white;
   border: none;
   padding: 15px 60px;
@@ -3263,7 +3275,7 @@ body {
 }
 
 .btn-submit-credit:hover {
-  background-color: #7a6349;
+  background-color: #c41a1f;
 }
 
 /* Calculate Trade Page */
@@ -3285,7 +3297,7 @@ body {
 
 .trade-page-header h1 {
   font-size: 32px;
-  color: #8B7355;
+  color: #000000;
   font-weight: normal;
   letter-spacing: 2px;
 }
@@ -3302,7 +3314,7 @@ body {
 
 .trade-intro-section h2 {
   font-size: 20px;
-  color: #8B7355;
+  color: #000000;
   font-weight: bold;
   margin-bottom: 20px;
   letter-spacing: 1px;
@@ -3400,7 +3412,7 @@ body {
 }
 
 .btn-submit-trade {
-  background-color: #8B7355;
+  background-color: #e31e24;
   color: white;
   border: none;
   padding: 15px 60px;
@@ -3413,7 +3425,7 @@ body {
 }
 
 .btn-submit-trade:hover {
-  background-color: #7a6349;
+  background-color: #c41a1f;
 }
 
 /* Calculate Payments Page */
@@ -3460,7 +3472,7 @@ body {
 }
 
 .btn-preapproved {
-  background-color: #8B7355;
+  background-color: #e31e24;
   color: white;
   border: none;
   padding: 12px 40px;
@@ -3472,7 +3484,7 @@ body {
 }
 
 .btn-preapproved:hover {
-  background-color: #7a6349;
+  background-color: #c41a1f;
 }
 
 .calculators-container {
@@ -3562,7 +3574,7 @@ body {
 
 .btn-search-used {
   width: 100%;
-  background-color: #8B7355;
+  background-color: #e31e24;
   color: white;
   border: none;
   padding: 12px;
@@ -3574,7 +3586,7 @@ body {
 }
 
 .btn-search-used:hover {
-  background-color: #7a6349;
+  background-color: #c41a1f;
 }
 
 .calculator-disclaimer {
@@ -3701,7 +3713,7 @@ body {
 }
 
 .breadcrumb-container a:hover {
-  color: #8B7355;
+  color: #000000;
 }
 
 .breadcrumb-container span {
@@ -3717,7 +3729,7 @@ body {
 
 .about-main-title {
   font-size: 28px;
-  color: #8B7355;
+  color: #000000;
   font-weight: normal;
   letter-spacing: 2px;
   margin: 0;
@@ -3769,7 +3781,7 @@ body {
 
 .about-contact-title {
   font-size: 18px;
-  color: #8B7355;
+  color: #000000;
   font-weight: bold;
   margin-bottom: 20px;
   letter-spacing: 1px;
@@ -3791,7 +3803,7 @@ body {
 
 .about-hours-title {
   font-size: 16px;
-  color: #8B7355;
+  color: #000000;
   font-weight: bold;
   margin-bottom: 20px;
   letter-spacing: 1px;

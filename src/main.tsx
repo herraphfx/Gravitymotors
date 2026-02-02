@@ -19,6 +19,7 @@ import AboutUs from './pages/AboutUs.tsx'
 import MapAndHours from './pages/MapAndHours.tsx'
 import ContactUs from './pages/ContactUs.tsx'
 import VehicleDetails from './pages/VehicleDetails.tsx'
+import ProductDetails from './pages/ProductDetails.tsx'
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>

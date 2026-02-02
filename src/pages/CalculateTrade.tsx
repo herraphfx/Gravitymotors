@@ -62,7 +62,7 @@ function CalculateTrade() {
               Interested in trading in your current vehicle? It would probably be good to have an estimate of what it's worth first. After all, trading in a vehicle is a lot less hassle than selling it yourself. And you can often lower your payments by trading in a vehicle as well. Win-win!
             </p>
             <p>
-              We're here to help you make an informed decision here at Amazing Luxury Cars Inc. Fill out the simple form below, and we'll send you an estimated appraisal within 48 hours. From there, it's up to you what you want to do!
+              We're here to help you make an informed decision here at Gravity Motors Inc. Fill out the simple form below, and we'll send you an estimated appraisal within 48 hours. From there, it's up to you what you want to do!
             </p>
           </div>
 
@@ -337,7 +337,7 @@ function CalculateTrade() {
 
               <div className="form-disclaimer-trade">
                 <p>
-                  By clicking "Submit", you agree to Amazing Luxury Cars Terms of Use and Privacy Policy. You consent to receive phone calls and SMS messages from Amazing Luxury Cars to provide updates on your order and/or for marketing purposes. Message frequency depends on your activity. You may opt-out by texting "STOP". Message and data rates may apply.
+                  By clicking "Submit", you agree to Gravity Motors Terms of Use and Privacy Policy. You consent to receive phone calls and SMS messages from Gravity Motors to provide updates on your order and/or for marketing purposes. Message frequency depends on your activity. You may opt-out by texting "STOP". Message and data rates may apply.
                 </p>
               </div>
 

@@ -43,13 +43,13 @@ function ContactUs() {
             <div className="benefit-card">
               <span className="benefit-icon">📞</span>
               <h3>Call Us</h3>
-              <p><strong style={{ fontSize: '20px', color: '#8B7355' }}>770-982-3733</strong></p>
+              <p><strong style={{ fontSize: '20px', color: '#8B7355' }}>404-254-4131</strong></p>
               <p>Monday - Saturday<br/>9:00 AM - 7:00 PM</p>
             </div>
             <div className="benefit-card">
               <span className="benefit-icon">💬</span>
               <h3>Text or Chat</h3>
-              <p>Text: <strong>770-982-3733</strong></p>
+              <p>Text: <strong>404-254-4131</strong></p>
               <p>Live chat available on our website</p>
             </div>
             <div className="benefit-card">
@@ -62,7 +62,7 @@ function ContactUs() {
               <span className="benefit-icon">📍</span>
               <h3>Visit Us</h3>
               <p>3591 Stone Mountain Hwy 78 W</p>
-              <p>Snellville, GA 30039</p>
+              <p>Forest Park, GA 30297</p>
             </div>
           </div>
 
@@ -216,14 +216,14 @@ function ContactUs() {
 
           <div className="financing-promo">
             <h2>📍 Visit Our Showroom</h2>
-            <p>3591 Stone Mountain Highway 78 W, Snellville, GA 30039</p>
+            <p>4040 Jonesboro Road, Forest Park, GA 30297</p>
             <p>Monday - Saturday: 9:00 AM - 7:00 PM | Sunday: Closed</p>
             <button className="btn-financing">Get Directions</button>
           </div>
 
           <div className="contact-cta">
             <h3>Prefer Immediate Assistance?</h3>
-            <p>Call us now at <strong>770-982-3733</strong> or use our live chat feature!</p>
+            <p>Call us now at <strong>404-254-4131</strong> or use our live chat feature!</p>
           </div>
         </div>
       </div>

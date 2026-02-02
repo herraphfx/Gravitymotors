@@ -7,20 +7,20 @@ function MapAndHours() {
       <div className="page-container">
         <div className="page-hero">
           <h1 className="page-title">MAP & HOURS</h1>
-          <p className="page-subtitle">Visit us at our convenient Snellville location</p>
+          <p className="page-subtitle">Visit us at our convenient Forest Park location</p>
         </div>
 
         <div className="page-content">
           <div className="specials-intro">
             <h2>Find Us</h2>
-            <p>We're conveniently located in Snellville, GA. Stop by during our business hours to browse our inventory, schedule service, or speak with our team.</p>
+            <p>We're conveniently located in Forest Park, GA. Stop by during our business hours to browse our inventory, schedule service, or speak with our team.</p>
           </div>
 
           <div className="get-in-touch">
             <h2>OUR LOCATION</h2>
             <div className="map-container">
               <iframe 
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3308.7!2d-84.0!3d33.9!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMzPCsDU0JzAwLjAiTiA4NMKwMDAnMDAuMCJX!5e0!3m2!1sen!2sus!4v1234567890"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3313.2!2d-84.3544!3d33.6562!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88f51cedf7c5c3c5%3A0x0!2s4040%20Jonesboro%20Rd%2C%20Forest%20Park%2C%20GA%2030297!5e0!3m2!1sen!2sus!4v1234567890"
                 width="100%"
                 height="450"
                 style={{ border: 0, borderRadius: '8px' }}
@@ -34,12 +34,12 @@ function MapAndHours() {
           <div className="info-section">
             <div className="info-card">
               <h3>📍 Address</h3>
-              <p>3591 Stone Mountain Highway 78 W<br/>Snellville, GA 30039</p>
+              <p>4040 Jonesboro Road<br/>Forest Park, GA 30297</p>
               <button className="btn-calculator">Get Directions</button>
             </div>
             <div className="info-card">
               <h3>📞 Phone</h3>
-              <p>Sales & Service: 770-982-3733<br/>Text: 770-982-3733</p>
+              <p>Sales & Service: 404-254-4131<br/>Text: 404-254-4131</p>
               <button className="btn-calculator">Call Now</button>
             </div>
             <div className="info-card">

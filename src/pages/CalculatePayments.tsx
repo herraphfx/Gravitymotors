@@ -116,7 +116,7 @@ function CalculatePayments() {
         </div>
 
         <div className="payments-intro">
-          <h2>CONTACT US AT <a href="tel:770-982-3733" style={{color: '#8B7355', textDecoration: 'none'}}>770-982-3733</a> FOR MORE INFORMATION.</h2>
+          <h2>CONTACT US AT <a href="tel:404-254-4131" style={{color: '#8B7355', textDecoration: 'none'}}>404-254-4131</a> FOR MORE INFORMATION.</h2>
           <p>Or you can start the pre-approval process by using our online credit application</p>
           <button className="btn-preapproved">Get Pre-Approved</button>
         </div>

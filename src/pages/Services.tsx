@@ -69,10 +69,10 @@ function Services() {
         <div className="services-content">
           <div className="services-intro">
             <p>
-              In addition to offering the best selection of pre-owned luxury cars in the area, Amazing Luxury Cars Inc is home to a service department that is capable of taking care of these impressive vehicles. Let a practiced hand take care of your high-line car through the Amazing Luxury Cars Inc service department.
+              In addition to offering the best selection of pre-owned luxury cars in the area, Gravity Motors Inc is home to a service department that is capable of taking care of these impressive vehicles. Let a practiced hand take care of your high-line car through the Gravity Motors Inc service department.
             </p>
             <p>
-              If your car needs routine maintenance, or more substantial repairs, the Amazing Luxury Cars Inc service center is here to help. Schedule your appointment with us today.
+              If your car needs routine maintenance, or more substantial repairs, the Gravity Motors Inc service center is here to help. Schedule your appointment with us today.
             </p>
           </div>
 
@@ -634,7 +634,7 @@ function Services() {
 
               <div className="form-disclaimer">
                 <p>
-                  By clicking "Submit", you agree to Amazing Luxury Cars Terms of Use and Privacy Policy. You consent to receive phone calls and SMS messages from Amazing Luxury Cars to provide updates on your order and/or for marketing purposes. Message frequency depends on your activity. You may opt-out by texting "STOP". Message and data rates may apply.
+                  By clicking "Submit", you agree to Gravity Motors Terms of Use and Privacy Policy. You consent to receive phone calls and SMS messages from Gravity Motors to provide updates on your order and/or for marketing purposes. Message frequency depends on your activity. You may opt-out by texting "STOP". Message and data rates may apply.
                 </p>
               </div>
 
@@ -651,9 +651,9 @@ function Services() {
           <div className="service-hours-map">
             <div className="map-section">
               <iframe 
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3308.7!2d-84.0!3d33.9!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMzPCsDU0JzAwLjAiTiA4NMKwMDAnMDAuMCJX!5e0!3m2!1sen!2sus!4v1234567890"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3313.2!2d-84.3544!3d33.6562!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88f51cedf7c5c3c5%3A0x0!2s4040%20Jonesboro%20Rd%2C%20Forest%20Park%2C%20GA%2030297!5e0!3m2!1sen!2sus!4v1234567890"
                 width="100%"
-                height="450"
+                height="550"
                 style={{ border: 0 }}
                 allowFullScreen
                 loading="lazy"
@@ -694,9 +694,9 @@ function Services() {
               </div>
               <div className="service-contact">
                 <h4>Service Department</h4>
-                <p>3591 Stone Mountain Highway 78 W</p>
-                <p>Snellville, GA 30039</p>
-                <p><strong>Phone: 770-425-3500</strong></p>
+                <p>4040 Jonesboro Road</p>
+                <p>Forest Park, GA 30297</p>
+                <p><strong>Phone: 404-254-4131</strong></p>
               </div>
             </div>
           </div>

@@ -36,25 +36,25 @@ function AboutUs() {
         <div className="about-content-section">
           <div className="about-text-content">
             <p className="about-paragraph">
-              Amazing Luxury Cars Inc is a high-line car dealership serving Snellville and the surrounding areas. We have been in business since 1987, and have offered an impressive selection of vehicles from all of the top luxury brands at the best prices possible.
+              Gravity Motors Inc is a high-line car dealership serving Forest Park and the surrounding areas. We have been in business since 1987, and have offered an impressive selection of vehicles from all of the top luxury brands at the best prices possible.
             </p>
 
             <p className="about-paragraph">
-              Once you find the perfect car in our inventory, the Amazing Luxury Cars Inc finance department will help get you behind the wheel at the best rate possible. Shoppers at all credit levels are welcome at Amazing Luxury Cars Inc.
+              Once you find the perfect car in our inventory, the Gravity Motors Inc finance department will help get you behind the wheel at the best rate possible. Shoppers at all credit levels are welcome at Gravity Motors Inc.
             </p>
 
             <p className="about-paragraph">
-              After you take home your new car from Amazing Luxury Cars Inc, our service center will help you keep it in the best condition possible. Our service team specializes in the high-line models we sell. Be sure only the highest trained hands service your car by scheduling an appointment at Amazing Luxury Cars Inc today.
+              After you take home your new car from Gravity Motors Inc, our service center will help you keep it in the best condition possible. Our service team specializes in the high-line models we sell. Be sure only the highest trained hands service your car by scheduling an appointment at Gravity Motors Inc today.
             </p>
           </div>
 
           {/* Contact and Map Section */}
           <div className="about-contact-map-section">
             <div className="about-contact-info">
-              <h2 className="about-contact-title">AMAZING LUXURY CARS</h2>
-              <p className="about-address">3591 Stone Mountain Highway 78 W</p>
-              <p className="about-address">Snellville, GA 30039</p>
-              <p className="about-phone">Phone: 770-982-3733</p>
+              <h2 className="about-contact-title">GRAVITY MOTORS</h2>
+              <p className="about-address">4040 Jonesboro Road</p>
+              <p className="about-address">Forest Park, GA 30297</p>
+              <p className="about-phone">Phone: 404-254-4131</p>
 
               <h3 className="about-hours-title">HOURS OF OPERATION</h3>
               <div className="about-hours-list">
@@ -91,7 +91,7 @@ function AboutUs() {
 
             <div className="about-map-container">
               <iframe 
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3308.7!2d-84.0!3d33.9!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMzPCsDU0JzAwLjAiTiA4NMKwMDAnMDAuMCJX!5e0!3m2!1sen!2sus!4v1234567890"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3313.2!2d-84.3544!3d33.6562!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88f51cedf7c5c3c5%3A0x0!2s4040%20Jonesboro%20Rd%2C%20Forest%20Park%2C%20GA%2030297!5e0!3m2!1sen!2sus!4v1234567890"
                 width="100%"
                 height="100%"
                 style={{ border: 0 }}
