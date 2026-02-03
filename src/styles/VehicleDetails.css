@@ -97,8 +97,9 @@
 
 .phone-number {
   font-size: 18px;
-  color: #0066cc;
+  color: #e31e24;
   margin: 10px 0;
+  font-weight: bold;
 }
 
 .get-preapproved-btn {
@@ -138,7 +139,7 @@
 }
 
 .action-btn {
-  background-color: #8b6f47;
+  background-color: #e31e24;
   color: white;
   border: none;
   padding: 15px;
@@ -146,10 +147,11 @@
   cursor: pointer;
   border-radius: 3px;
   font-weight: 500;
+  transition: background-color 0.3s;
 }
 
 .action-btn:hover {
-  background-color: #6d5636;
+  background-color: #c41a1f;
 }
 
 /* Image Gallery */
@@ -597,7 +599,7 @@
 }
 
 .submit-btn {
-  background-color: #8b6f47;
+  background-color: #e31e24;
   color: white;
   border: none;
   padding: 15px;
@@ -606,10 +608,11 @@
   cursor: pointer;
   border-radius: 3px;
   margin-top: 10px;
+  transition: background-color 0.3s;
 }
 
 .submit-btn:hover {
-  background-color: #6d5636;
+  background-color: #c41a1f;
 }
 
 /* Payment Options */

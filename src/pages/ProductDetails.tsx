@@ -126,6 +126,14 @@ function ProductDetails() {
     return '₦' + price.toLocaleString()
   }
 
+  const handlePrevImage = () => {
+    setSelectedImage((prev) => (prev === 0 ? productImages.length - 1 : prev - 1))
+  }
+
+  const handleNextImage = () => {
+    setSelectedImage((prev) => (prev === productImages.length - 1 ? 0 : prev + 1))
+  }
+
   const handleAddToCart = () => {
     alert(`Added ${quantity} ${product.name} to cart`)
   }
@@ -154,8 +162,20 @@ function ProductDetails() {
                 </div>
               ))}
             </div>
-            <div className="product-main-image">
-              <img src={productImages[selectedImage]} alt={product.name} />
+            <div className="product-main-image-wrapper">
+              <div className="product-main-image">
+                <img src={productImages[selectedImage]} alt={product.name} />
+              </div>
+              <div className="image-navigation-dots">
+                {productImages.map((_, index) => (
+                  <button
+                    key={index}
+                    className={`image-dot ${selectedImage === index ? 'active' : ''}`}
+                    onClick={() => setSelectedImage(index)}
+                    aria-label={`View image ${index + 1}`}
+                  />
+                ))}
+              </div>
             </div>
           </div>
 
@@ -182,10 +202,6 @@ function ProductDetails() {
             <div className="product-price-section">
               <div className="price-display">
                 <div className="product-detail-price">{formatPrice(product.price)}</div>
-              </div>
-              <div className="need-help">
-                <span>Need Help?</span>
-                <button className="chat-with-us-btn">Chat with us</button>
               </div>
             </div>
 

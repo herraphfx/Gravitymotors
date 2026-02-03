@@ -1,12 +1,107 @@
 import '../App.css'
+import '../styles/Modal.css'
 import { useState } from 'react'
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 import Layout from '../components/Layout'
 
 function ViewAll() {
+  const navigate = useNavigate()
   const [selectedMakes, setSelectedMakes] = useState<string[]>([])
   const [priceRange, setPriceRange] = useState({ min: 0, max: 100000 })
   const [mileageRange, setMileageRange] = useState({ min: 0, max: 200000 })
+  const [showModal, setShowModal] = useState(false)
+  const [showTestDriveModal, setShowTestDriveModal] = useState(false)
+  const [selectedVehicle, setSelectedVehicle] = useState<any>(null)
+  const [formData, setFormData] = useState({
+    firstName: '',
+    lastName: '',
+    email: '',
+    phone: '',
+    comments: ''
+  })
+  const [testDriveFormData, setTestDriveFormData] = useState({
+    firstName: '',
+    lastName: '',
+    email: '',
+    phone: '',
+    bestTimeToContact: 'Morning',
+    timeZone: '',
+    firstPreferenceDate: '',
+    firstPreferenceTime: '8 a.m.',
+    secondPreferenceDate: '',
+    secondPreferenceTime: '8 a.m.',
+    comments: ''
+  })
+
+  const handleApplyNow = (vehicle: any) => {
+    navigate('/credit-approval', { state: { vehicle } })
+  }
+
+  const handleRequestInfo = (vehicle: any) => {
+    setSelectedVehicle(vehicle)
+    setShowModal(true)
+  }
+
+  const closeModal = () => {
+    setShowModal(false)
+    setSelectedVehicle(null)
+    setFormData({
+      firstName: '',
+      lastName: '',
+      email: '',
+      phone: '',
+      comments: ''
+    })
+  }
+
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    setFormData({
+      ...formData,
+      [e.target.name]: e.target.value
+    })
+  }
+
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault()
+    alert(`Request submitted for ${selectedVehicle.year} ${selectedVehicle.make} ${selectedVehicle.model}`)
+    closeModal()
+  }
+
+  const handleScheduleTestDrive = (vehicle: any) => {
+    setSelectedVehicle(vehicle)
+    setShowTestDriveModal(true)
+  }
+
+  const closeTestDriveModal = () => {
+    setShowTestDriveModal(false)
+    setSelectedVehicle(null)
+    setTestDriveFormData({
+      firstName: '',
+      lastName: '',
+      email: '',
+      phone: '',
+      bestTimeToContact: 'Morning',
+      timeZone: '',
+      firstPreferenceDate: '',
+      firstPreferenceTime: '8 a.m.',
+      secondPreferenceDate: '',
+      secondPreferenceTime: '8 a.m.',
+      comments: ''
+    })
+  }
+
+  const handleTestDriveInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
+    setTestDriveFormData({
+      ...testDriveFormData,
+      [e.target.name]: e.target.value
+    })
+  }
+
+  const handleTestDriveSubmit = (e: React.FormEvent) => {
+    e.preventDefault()
+    alert(`Test drive scheduled for ${selectedVehicle.year} ${selectedVehicle.make} ${selectedVehicle.model}`)
+    closeTestDriveModal()
+  }
 
   const vehicles = [
     {
@@ -329,9 +424,9 @@ function ViewAll() {
                   </div>
 
                      <div className="action-buttons">
-                    <button className="btn-action btn-details">404-254-4131</button>
-                    <button className="btn-action btn-email">Apply Now</button>
-                    <button className="btn-action btn-request">Request More Info</button>
+                    <button className="btn-action btn-details" onClick={() => handleScheduleTestDrive(vehicle)}>SCHEDULE A TEST DRIVE</button>
+                    <button className="btn-action btn-email" onClick={() => handleApplyNow(vehicle)}>Apply Now</button>
+                    <button className="btn-action btn-request" onClick={() => handleRequestInfo(vehicle)}>Request More Info</button>
                   </div>
                 </div>
 
@@ -367,6 +462,319 @@ function ViewAll() {
           </div>
         </div>
       </div>
+
+      {/* Schedule Test Drive Modal */}
+      {showTestDriveModal && selectedVehicle && (
+        <div className="modal-overlay" onClick={closeTestDriveModal}>
+          <div className="modal-content modal-content-large" onClick={(e) => e.stopPropagation()}>
+            <div className="modal-header">
+              <h2>SCHEDULE TEST DRIVE</h2>
+              <button className="modal-close-btn" onClick={closeTestDriveModal}>×</button>
+            </div>
+
+            <div className="modal-body">
+              <div className="modal-vehicle-info">
+                <img src={selectedVehicle.image} alt={`${selectedVehicle.year} ${selectedVehicle.make} ${selectedVehicle.model}`} />
+                <div className="modal-vehicle-details">
+                  <h3>{selectedVehicle.year} {selectedVehicle.make} {selectedVehicle.model}</h3>
+                  <p className="modal-vehicle-trim">{selectedVehicle.trim}</p>
+                  <div className="modal-vehicle-price-phone">
+                    <div>
+                      <span className="modal-price-label">Retail Price</span>
+                      <span className="modal-price-value">${selectedVehicle.price.toLocaleString()}</span>
+                    </div>
+                    <div className="modal-phone">404-254-4131</div>
+                  </div>
+                </div>
+              </div>
+
+              <form onSubmit={handleTestDriveSubmit} className="modal-form">
+                <h3 className="modal-section-title">CONTACT INFORMATION</h3>
+                
+                <div className="modal-form-row">
+                  <div className="modal-form-group">
+                    <label>First Name *</label>
+                    <input
+                      type="text"
+                      name="firstName"
+                      value={testDriveFormData.firstName}
+                      onChange={handleTestDriveInputChange}
+                      required
+                    />
+                  </div>
+                  <div className="modal-form-group">
+                    <label>Last Name *</label>
+                    <input
+                      type="text"
+                      name="lastName"
+                      value={testDriveFormData.lastName}
+                      onChange={handleTestDriveInputChange}
+                      required
+                    />
+                  </div>
+                </div>
+
+                <div className="modal-form-row">
+                  <div className="modal-form-group">
+                    <label>Email *</label>
+                    <input
+                      type="email"
+                      name="email"
+                      value={testDriveFormData.email}
+                      onChange={handleTestDriveInputChange}
+                      placeholder="Example: name@domain.com"
+                      required
+                    />
+                  </div>
+                  <div className="modal-form-group">
+                    <label>Phone</label>
+                    <input
+                      type="tel"
+                      name="phone"
+                      value={testDriveFormData.phone}
+                      onChange={handleTestDriveInputChange}
+                      placeholder="Example: 999-999-9999"
+                    />
+                  </div>
+                </div>
+
+                <div className="modal-form-row">
+                  <div className="modal-form-group">
+                    <label>Best Time To Contact</label>
+                    <select
+                      name="bestTimeToContact"
+                      value={testDriveFormData.bestTimeToContact}
+                      onChange={handleTestDriveInputChange}
+                      className="modal-select"
+                    >
+                      <option value="Morning">Morning</option>
+                      <option value="Afternoon">Afternoon</option>
+                      <option value="Evening">Evening</option>
+                    </select>
+                  </div>
+                  <div className="modal-form-group">
+                    <label>Time Zone</label>
+                    <select
+                      name="timeZone"
+                      value={testDriveFormData.timeZone}
+                      onChange={handleTestDriveInputChange}
+                      className="modal-select"
+                    >
+                      <option value="">Select Time Zone</option>
+                      <option value="EST">Eastern Time</option>
+                      <option value="CST">Central Time</option>
+                      <option value="MST">Mountain Time</option>
+                      <option value="PST">Pacific Time</option>
+                    </select>
+                  </div>
+                </div>
+
+                <h3 className="modal-section-title">APPOINTMENT DATE & TIME</h3>
+
+                <div className="modal-form-row">
+                  <div className="modal-form-group">
+                    <label>1st Time Preference</label>
+                    <input
+                      type="date"
+                      name="firstPreferenceDate"
+                      value={testDriveFormData.firstPreferenceDate}
+                      onChange={handleTestDriveInputChange}
+                    />
+                  </div>
+                  <div className="modal-form-group">
+                    <label>&nbsp;</label>
+                    <select
+                      name="firstPreferenceTime"
+                      value={testDriveFormData.firstPreferenceTime}
+                      onChange={handleTestDriveInputChange}
+                      className="modal-select"
+                    >
+                      <option value="8 a.m.">8 a.m.</option>
+                      <option value="9 a.m.">9 a.m.</option>
+                      <option value="10 a.m.">10 a.m.</option>
+                      <option value="11 a.m.">11 a.m.</option>
+                      <option value="12 p.m.">12 p.m.</option>
+                      <option value="1 p.m.">1 p.m.</option>
+                      <option value="2 p.m.">2 p.m.</option>
+                      <option value="3 p.m.">3 p.m.</option>
+                      <option value="4 p.m.">4 p.m.</option>
+                      <option value="5 p.m.">5 p.m.</option>
+                      <option value="6 p.m.">6 p.m.</option>
+                    </select>
+                  </div>
+                </div>
+
+                <div className="modal-form-row">
+                  <div className="modal-form-group">
+                    <label>2nd Time Preference</label>
+                    <input
+                      type="date"
+                      name="secondPreferenceDate"
+                      value={testDriveFormData.secondPreferenceDate}
+                      onChange={handleTestDriveInputChange}
+                    />
+                  </div>
+                  <div className="modal-form-group">
+                    <label>&nbsp;</label>
+                    <select
+                      name="secondPreferenceTime"
+                      value={testDriveFormData.secondPreferenceTime}
+                      onChange={handleTestDriveInputChange}
+                      className="modal-select"
+                    >
+                      <option value="8 a.m.">8 a.m.</option>
+                      <option value="9 a.m.">9 a.m.</option>
+                      <option value="10 a.m.">10 a.m.</option>
+                      <option value="11 a.m.">11 a.m.</option>
+                      <option value="12 p.m.">12 p.m.</option>
+                      <option value="1 p.m.">1 p.m.</option>
+                      <option value="2 p.m.">2 p.m.</option>
+                      <option value="3 p.m.">3 p.m.</option>
+                      <option value="4 p.m.">4 p.m.</option>
+                      <option value="5 p.m.">5 p.m.</option>
+                      <option value="6 p.m.">6 p.m.</option>
+                    </select>
+                  </div>
+                </div>
+
+                <div className="modal-form-group">
+                  <label>Comments</label>
+                  <textarea
+                    name="comments"
+                    value={testDriveFormData.comments}
+                    onChange={handleTestDriveInputChange}
+                    rows={4}
+                  />
+                </div>
+
+                <div className="modal-disclaimer">
+                  <p>
+                    By clicking "Submit", you agree to Gravity Motors Terms of Use and Privacy Policy. 
+                    You consent to receive phone calls and SMS messages from Gravity Motors to provide 
+                    updates on your order and/or for marketing purposes. Message frequency depends on your 
+                    activity. You may opt-out by texting "STOP". Message and data rates may apply.
+                  </p>
+                </div>
+
+                <p className="modal-required-note">* Denotes a Required Field.</p>
+
+                <button type="submit" className="modal-submit-btn">Schedule Test Drive</button>
+
+                <div className="modal-footer-text">
+                  <p>Call Gravity Motors today for more information about this vehicle.</p>
+                  <p className="modal-footer-phone">404-254-4131</p>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      )}
+
+      {/* Request More Info Modal */}
+      {showModal && selectedVehicle && (
+        <div className="modal-overlay" onClick={closeModal}>
+          <div className="modal-content" onClick={(e) => e.stopPropagation()}>
+            <div className="modal-header">
+              <h2>REQUEST MORE INFO</h2>
+              <button className="modal-close-btn" onClick={closeModal}>×</button>
+            </div>
+
+            <div className="modal-body">
+              <div className="modal-vehicle-info">
+                <img src={selectedVehicle.image} alt={`${selectedVehicle.year} ${selectedVehicle.make} ${selectedVehicle.model}`} />
+                <div className="modal-vehicle-details">
+                  <h3>{selectedVehicle.year} {selectedVehicle.make} {selectedVehicle.model}</h3>
+                  <p className="modal-vehicle-trim">{selectedVehicle.trim}</p>
+                  <div className="modal-vehicle-price-phone">
+                    <div>
+                      <span className="modal-price-label">Retail Price</span>
+                      <span className="modal-price-value">${selectedVehicle.price.toLocaleString()}</span>
+                    </div>
+                    <div className="modal-phone">404-254-4131</div>
+                  </div>
+                </div>
+              </div>
+
+              <form onSubmit={handleSubmit} className="modal-form">
+                <div className="modal-form-row">
+                  <div className="modal-form-group">
+                    <label>First Name *</label>
+                    <input
+                      type="text"
+                      name="firstName"
+                      value={formData.firstName}
+                      onChange={handleInputChange}
+                      required
+                    />
+                  </div>
+                  <div className="modal-form-group">
+                    <label>Last Name *</label>
+                    <input
+                      type="text"
+                      name="lastName"
+                      value={formData.lastName}
+                      onChange={handleInputChange}
+                      required
+                    />
+                  </div>
+                </div>
+
+                <div className="modal-form-row">
+                  <div className="modal-form-group">
+                    <label>Email *</label>
+                    <input
+                      type="email"
+                      name="email"
+                      value={formData.email}
+                      onChange={handleInputChange}
+                      placeholder="Example: name@domain.com"
+                      required
+                    />
+                  </div>
+                  <div className="modal-form-group">
+                    <label>Phone</label>
+                    <input
+                      type="tel"
+                      name="phone"
+                      value={formData.phone}
+                      onChange={handleInputChange}
+                      placeholder="Example: 999-999-9999"
+                    />
+                  </div>
+                </div>
+
+                <div className="modal-form-group">
+                  <label>Comments</label>
+                  <textarea
+                    name="comments"
+                    value={formData.comments}
+                    onChange={handleInputChange}
+                    rows={4}
+                  />
+                </div>
+
+                <div className="modal-disclaimer">
+                  <p>
+                    By clicking "Submit", you agree to Gravity Motors Terms of Use and Privacy Policy. 
+                    You consent to receive phone calls and SMS messages from Gravity Motors to provide 
+                    updates on your order and/or for marketing purposes. Message frequency depends on your 
+                    activity. You may opt-out by texting "STOP". Message and data rates may apply.
+                  </p>
+                </div>
+
+                <p className="modal-required-note">* Denotes a required field.</p>
+
+                <button type="submit" className="modal-submit-btn">Send</button>
+
+                <div className="modal-footer-text">
+                  <p>Call Gravity Motors today for more information about this vehicle.</p>
+                  <p className="modal-footer-phone">404-254-4131</p>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      )}
     </Layout>
   )
 }

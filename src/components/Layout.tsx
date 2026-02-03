@@ -60,10 +60,8 @@ function Layout({ children }: LayoutProps) {
       <header className="top-header">
         <div className="header-container">
           <div className="logo-section">
-            <img src="/gravity-motors-logo.svg" alt="Gravity Motors Logo" className="company-logo" />
-            <Link to="/" className="company-name" style={{ textDecoration: 'none', color: 'white' }}>
-              Gravity Motors
-            </Link>
+            <img src="/gravity-motors-logo.png.png" alt="Gravity Motors Logo" className="company-logo" />
+            <h1 className="company-name">Gravity Motors</h1>
           </div>
           <div className="address-info">
             <p className="address-line">4040 Jonesboro Road</p>

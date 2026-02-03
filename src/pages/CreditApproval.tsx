@@ -1,8 +1,12 @@
 import '../App.css'
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
+import { useLocation } from 'react-router-dom'
 import Layout from '../components/Layout'
 
 function CreditApproval() {
+  const location = useLocation()
+  const vehicleData = location.state?.vehicle
+
   const [formData, setFormData] = useState({
     // Vehicle of Interest
     year: '',
@@ -130,15 +134,67 @@ function CreditApproval() {
           {/* Vehicle of Interest */}
           <div className="form-section-credit">
             <h2 className="section-title-credit">VEHICLE OF INTEREST</h2>
+            
+            {vehicleData && (
+              <div className="vehicle-interest-display">
+                <div className="vehicle-interest-image">
+                  <img src={vehicleData.image} alt={`${vehicleData.year} ${vehicleData.make} ${vehicleData.model}`} />
+                </div>
+                <div className="vehicle-interest-details">
+                  <h3 className="vehicle-interest-title">{vehicleData.year} {vehicleData.make} {vehicleData.model}</h3>
+                  <div className="vehicle-interest-specs">
+                    <div className="vehicle-interest-spec-row">
+                      <span className="spec-label-interest">Condition:</span>
+                      <span className="spec-value-interest">Used</span>
+                    </div>
+                    <div className="vehicle-interest-spec-row">
+                      <span className="spec-label-interest">Engine:</span>
+                      <span className="spec-value-interest">{vehicleData.engine}</span>
+                    </div>
+                    <div className="vehicle-interest-spec-row">
+                      <span className="spec-label-interest">Transmission:</span>
+                      <span className="spec-value-interest">{vehicleData.transmission}</span>
+                    </div>
+                    <div className="vehicle-interest-spec-row">
+                      <span className="spec-label-interest">Exterior Color:</span>
+                      <span className="spec-value-interest">{vehicleData.exteriorColor}</span>
+                    </div>
+                    <div className="vehicle-interest-spec-row">
+                      <span className="spec-label-interest">Drivetrain:</span>
+                      <span className="spec-value-interest">{vehicleData.drivetrain}</span>
+                    </div>
+                    <div className="vehicle-interest-spec-row">
+                      <span className="spec-label-interest">Interior Color:</span>
+                      <span className="spec-value-interest">{vehicleData.interiorColor}</span>
+                    </div>
+                    <div className="vehicle-interest-spec-row">
+                      <span className="spec-label-interest">Mileage:</span>
+                      <span className="spec-value-interest">{vehicleData.mileage.toLocaleString()} Miles</span>
+                    </div>
+                    <div className="vehicle-interest-spec-row">
+                      <span className="spec-label-interest">VIN:</span>
+                      <span className="spec-value-interest">{vehicleData.vin}</span>
+                    </div>
+                    <div className="vehicle-interest-spec-row">
+                      <span className="spec-label-interest">Stock #:</span>
+                      <span className="spec-value-interest">{vehicleData.stock}</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            )}
+
+            <h3 className="subsection-title-credit" style={{ marginTop: '30px' }}>Application Completion Progress:</h3>
             <div className="form-row-credit">
               <div className="form-field-credit">
                 <label>Year</label>
                 <input
                   type="text"
                   name="year"
-                  value={formData.year}
+                  value={vehicleData?.year || formData.year}
                   onChange={handleChange}
                   className="input-credit"
+                  readOnly={!!vehicleData}
                 />
               </div>
               <div className="form-field-credit">
@@ -146,9 +202,10 @@ function CreditApproval() {
                 <input
                   type="text"
                   name="make"
-                  value={formData.make}
+                  value={vehicleData?.make || formData.make}
                   onChange={handleChange}
                   className="input-credit"
+                  readOnly={!!vehicleData}
                 />
               </div>
               <div className="form-field-credit">
@@ -156,9 +213,10 @@ function CreditApproval() {
                 <input
                   type="text"
                   name="model"
-                  value={formData.model}
+                  value={vehicleData?.model || formData.model}
                   onChange={handleChange}
                   className="input-credit"
+                  readOnly={!!vehicleData}
                 />
               </div>
               <div className="form-field-credit">
@@ -166,9 +224,10 @@ function CreditApproval() {
                 <input
                   type="text"
                   name="stockNumber"
-                  value={formData.stockNumber}
+                  value={vehicleData?.stock || formData.stockNumber}
                   onChange={handleChange}
                   className="input-credit"
+                  readOnly={!!vehicleData}
                 />
               </div>
             </div>

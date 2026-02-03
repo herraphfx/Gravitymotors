@@ -1012,6 +1012,51 @@ body {
   .top-search-bar {
     display: none;
   }
+
+  /* Hide inventory sidebar on mobile */
+  .inventory-sidebar {
+    display: none;
+  }
+
+  /* Make inventory layout single column on mobile */
+  .inventory-layout {
+    grid-template-columns: 1fr;
+  }
+
+  /* Make vehicle listing cards stack vertically on mobile */
+  .vehicle-listing-card {
+    grid-template-columns: 1fr;
+  }
+
+  .vehicle-listing-image {
+    height: 200px;
+  }
+
+  .vehicle-listing-actions {
+    padding: 15px;
+  }
+
+  .action-buttons {
+    grid-column: 1;
+    padding: 0 15px 15px 15px;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    gap: 10px;
+    overflow-x: auto;
+  }
+
+  .btn-action {
+    flex-shrink: 0;
+  }
+
+  /* Hide vehicle specs on mobile */
+  .vehicle-specs-grid {
+    display: none !important;
+  }
+
+  .vehicle-icons {
+    display: none !important;
+  }
 }
 
 @media (max-width: 480px) {
@@ -2538,7 +2583,7 @@ body {
   display: block;
   font-size: 28px;
   font-weight: bold;
-  color: #151212;
+  color: #e31e24;
 }
 
 .contact-info {
@@ -2575,6 +2620,11 @@ body {
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   position: relative;
   overflow: hidden;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
 }
 
 .btn-action:hover {
@@ -2608,14 +2658,13 @@ body {
 }
 
 .btn-schedule {
-  background: linear-gradient(135deg, #0066CC 0%, #0052A3 100%);
+  background: linear-gradient(135deg, #E31E24 0%, #C41A1F 100%);
   color: white;
   border: 2px solid transparent;
- 
 }
 
 .btn-schedule:hover {
-  background: linear-gradient(135deg, #0052a3 0%, #004080 100%);
+  background: linear-gradient(135deg, #c41a1f 0%, #a01519 100%);
 }
 
 .btn-request {
@@ -2958,7 +3007,7 @@ body {
 
 .map-section {
   width: 100%;
-  height: 450px;
+  height: 610px;
 }
 
 .map-section iframe {
@@ -3087,6 +3136,76 @@ body {
   margin: 0 auto;
   padding: 40px;
   background-color: white;
+}
+
+/* Vehicle Interest Display */
+.vehicle-interest-display {
+  display: grid;
+  grid-template-columns: 200px 1fr;
+  gap: 30px;
+  background-color: #f9f9f9;
+  padding: 25px;
+  border-radius: 8px;
+  margin-bottom: 30px;
+  border: 2px solid #e0e0e0;
+}
+
+.vehicle-interest-image {
+  width: 200px;
+  height: 150px;
+  overflow: hidden;
+  border-radius: 6px;
+  background-color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.vehicle-interest-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.vehicle-interest-details {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.vehicle-interest-title {
+  font-size: 20px;
+  font-weight: bold;
+  color: #000;
+  margin: 0;
+  letter-spacing: 0.5px;
+}
+
+.vehicle-interest-specs {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+}
+
+.vehicle-interest-spec-row {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.spec-label-interest {
+  font-size: 11px;
+  color: #666;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.spec-value-interest {
+  font-size: 13px;
+  color: #000;
+  font-weight: 500;
 }
 
 .form-section-credit {
@@ -3771,12 +3890,15 @@ body {
   border-radius: 4px;
   overflow: hidden;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  min-height: 400px;
 }
 
 .about-contact-info {
   background-color: #f9f9f9;
   padding: 40px 30px;
   border-right: 1px solid #e0e0e0;
+  display: flex;
+  flex-direction: column;
 }
 
 .about-contact-title {
@@ -3834,7 +3956,7 @@ body {
 
 .about-map-container {
   width: 100%;
-  height: 500px;
+  height: 610px;
   position: relative;
 }
 
@@ -4248,7 +4370,7 @@ body {
 }
 
 .add-to-cart-btn {
-  background-color: #2c3e50;
+  background-color: #e31e24;
   color: white;
   border: none;
   padding: 12px 24px;
@@ -4262,7 +4384,7 @@ body {
 }
 
 .add-to-cart-btn:hover {
-  background-color: #1a252f;
+  background-color: #c41a1f;
 }
 
 /* Chat Widget */
@@ -4437,6 +4559,13 @@ body {
   object-fit: cover;
 }
 
+.product-main-image-wrapper {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
 .product-main-image {
   flex: 1;
   border: 1px solid #e0e0e0;
@@ -4453,6 +4582,35 @@ body {
   max-width: 100%;
   max-height: 500px;
   object-fit: contain;
+}
+
+.image-navigation-dots {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 0;
+}
+
+.image-dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  border: none;
+  background-color: #d0d0d0;
+  cursor: pointer;
+  transition: all 0.3s;
+  padding: 0;
+}
+
+.image-dot:hover {
+  background-color: #999;
+}
+
+.image-dot.active {
+  background-color: #ff6600;
+  width: 14px;
+  height: 14px;
 }
 
 .product-info-section {
@@ -4557,7 +4715,7 @@ body {
 }
 
 .add-to-cart-detail-btn {
-  background-color: #2c3e50;
+  background-color: #e31e24;
   color: white;
   border: none;
   padding: 18px 40px;
@@ -4571,7 +4729,7 @@ body {
 }
 
 .add-to-cart-detail-btn:hover {
-  background-color: #1a252f;
+  background-color: #c41a1f;
 }
 
 .product-details-bottom {
