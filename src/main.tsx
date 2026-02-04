@@ -20,6 +20,7 @@ import MapAndHours from './pages/MapAndHours.tsx'
 import ContactUs from './pages/ContactUs.tsx'
 import VehicleDetails from './pages/VehicleDetails.tsx'
 import ProductDetails from './pages/ProductDetails.tsx'
+import Admin from './pages/Admin.tsx'
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
@@ -43,6 +44,7 @@ createRoot(document.getElementById('root')!).render(
         <Route path="/contact-us" element={<ContactUs />} />
         <Route path="/vehicle/:id" element={<VehicleDetails />} />
         <Route path="/product/:id" element={<ProductDetails />} />
+        <Route path="/admin" element={<Admin />} />
       </Routes>
     </BrowserRouter>
   </StrictMode>,
