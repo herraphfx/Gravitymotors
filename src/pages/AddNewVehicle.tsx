@@ -390,12 +390,61 @@ function AddNewVehicle() {
               <section className="form-section">
                 <h2 className="section-title">Photos</h2>
 
-                <div className="upload-area">
-                  <div className="upload-icon">⬆️</div>
-                  <p className="upload-text">
-                    <span className="upload-link">Click to upload</span> or drag and drop
-                  </p>
-                  <p className="upload-hint">PNG, JPG, GIF up to 10MB each</p>
+                <div className="photo-upload-grid">
+                  <div className="upload-box">
+                    <div className="upload-area">
+                      <div className="upload-icon">⬆️</div>
+                      <p className="upload-text">
+                        <span className="upload-link">Click to upload</span> or drag and drop
+                      </p>
+                      <p className="upload-hint">PNG, JPG, GIF up to 10MB each</p>
+                    </div>
+                    <p className="upload-label">Front View</p>
+                  </div>
+
+                  <div className="upload-box">
+                    <div className="upload-area">
+                      <div className="upload-icon">⬆️</div>
+                      <p className="upload-text">
+                        <span className="upload-link">Click to upload</span> or drag and drop
+                      </p>
+                      <p className="upload-hint">PNG, JPG, GIF up to 10MB each</p>
+                    </div>
+                    <p className="upload-label">Side View</p>
+                  </div>
+
+                  <div className="upload-box">
+                    <div className="upload-area">
+                      <div className="upload-icon">⬆️</div>
+                      <p className="upload-text">
+                        <span className="upload-link">Click to upload</span> or drag and drop
+                      </p>
+                      <p className="upload-hint">PNG, JPG, GIF up to 10MB each</p>
+                    </div>
+                    <p className="upload-label">Rear View</p>
+                  </div>
+
+                  <div className="upload-box">
+                    <div className="upload-area">
+                      <div className="upload-icon">⬆️</div>
+                      <p className="upload-text">
+                        <span className="upload-link">Click to upload</span> or drag and drop
+                      </p>
+                      <p className="upload-hint">PNG, JPG, GIF up to 10MB each</p>
+                    </div>
+                    <p className="upload-label">Interior View</p>
+                  </div>
+
+                  <div className="upload-box">
+                    <div className="upload-area">
+                      <div className="upload-icon">⬆️</div>
+                      <p className="upload-text">
+                        <span className="upload-link">Click to upload</span> or drag and drop
+                      </p>
+                      <p className="upload-hint">PNG, JPG, GIF up to 10MB each</p>
+                    </div>
+                    <p className="upload-label">Additional Photo</p>
+                  </div>
                 </div>
               </section>
 

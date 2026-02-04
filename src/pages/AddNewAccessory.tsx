@@ -295,12 +295,61 @@ function AddNewAccessory() {
               <section className="form-section">
                 <h2 className="section-title">Photos</h2>
 
-                <div className="upload-area">
-                  <div className="upload-icon">⬆️</div>
-                  <p className="upload-text">
-                    <span className="upload-link">Click to upload</span> or drag and drop
-                  </p>
-                  <p className="upload-hint">PNG, JPG, GIF up to 10MB each</p>
+                <div className="photo-upload-grid">
+                  <div className="upload-box">
+                    <div className="upload-area">
+                      <div className="upload-icon">⬆️</div>
+                      <p className="upload-text">
+                        <span className="upload-link">Click to upload</span> or drag and drop
+                      </p>
+                      <p className="upload-hint">PNG, JPG, GIF up to 10MB each</p>
+                    </div>
+                    <p className="upload-label">Main Photo</p>
+                  </div>
+
+                  <div className="upload-box">
+                    <div className="upload-area">
+                      <div className="upload-icon">⬆️</div>
+                      <p className="upload-text">
+                        <span className="upload-link">Click to upload</span> or drag and drop
+                      </p>
+                      <p className="upload-hint">PNG, JPG, GIF up to 10MB each</p>
+                    </div>
+                    <p className="upload-label">Additional Photo 1</p>
+                  </div>
+
+                  <div className="upload-box">
+                    <div className="upload-area">
+                      <div className="upload-icon">⬆️</div>
+                      <p className="upload-text">
+                        <span className="upload-link">Click to upload</span> or drag and drop
+                      </p>
+                      <p className="upload-hint">PNG, JPG, GIF up to 10MB each</p>
+                    </div>
+                    <p className="upload-label">Additional Photo 2</p>
+                  </div>
+
+                  <div className="upload-box">
+                    <div className="upload-area">
+                      <div className="upload-icon">⬆️</div>
+                      <p className="upload-text">
+                        <span className="upload-link">Click to upload</span> or drag and drop
+                      </p>
+                      <p className="upload-hint">PNG, JPG, GIF up to 10MB each</p>
+                    </div>
+                    <p className="upload-label">Additional Photo 3</p>
+                  </div>
+
+                  <div className="upload-box">
+                    <div className="upload-area">
+                      <div className="upload-icon">⬆️</div>
+                      <p className="upload-text">
+                        <span className="upload-link">Click to upload</span> or drag and drop
+                      </p>
+                      <p className="upload-hint">PNG, JPG, GIF up to 10MB each</p>
+                    </div>
+                    <p className="upload-label">Additional Photo 4</p>
+                  </div>
                 </div>
               </section>
 
