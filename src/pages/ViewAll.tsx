@@ -6,6 +6,7 @@ import Layout from '../components/Layout'
 
 function ViewAll() {
   const navigate = useNavigate()
+  const PHONE_NUMBER = '404-254-4131'
   const [selectedMakes, setSelectedMakes] = useState<string[]>([])
   const [priceRange, setPriceRange] = useState({ min: 0, max: 100000 })
   const [mileageRange, setMileageRange] = useState({ min: 0, max: 200000 })
@@ -438,13 +439,12 @@ function ViewAll() {
                     </div>
                     <div className="contact-info">
                       <p>Call Us</p>
-                      <p className="phone-number">404-254-4131</p>
+                      <p className="phone-number">{PHONE_NUMBER}</p>
                     </div>
                   </div>
 
               
                   <div className="additional-actions">
-                    <button className="btn-link">Estimate payment</button>
                     <button className="btn-link">Get pre-approved</button>
                     <button className="btn-link">Calculate my payment</button>
                   </div>
@@ -483,7 +483,7 @@ function ViewAll() {
                       <span className="modal-price-label">Retail Price</span>
                       <span className="modal-price-value">${selectedVehicle.price.toLocaleString()}</span>
                     </div>
-                    <div className="modal-phone">404-254-4131</div>
+                    <div className="modal-phone">{PHONE_NUMBER}</div>
                   </div>
                 </div>
               </div>
@@ -662,7 +662,7 @@ function ViewAll() {
 
                 <div className="modal-footer-text">
                   <p>Call Gravity Motors today for more information about this vehicle.</p>
-                  <p className="modal-footer-phone">404-254-4131</p>
+                  <p className="modal-footer-phone">{PHONE_NUMBER}</p>
                 </div>
               </form>
             </div>
@@ -690,7 +690,7 @@ function ViewAll() {
                       <span className="modal-price-label">Retail Price</span>
                       <span className="modal-price-value">${selectedVehicle.price.toLocaleString()}</span>
                     </div>
-                    <div className="modal-phone">404-254-4131</div>
+                    <div className="modal-phone">{PHONE_NUMBER}</div>
                   </div>
                 </div>
               </div>
@@ -768,7 +768,7 @@ function ViewAll() {
 
                 <div className="modal-footer-text">
                   <p>Call Gravity Motors today for more information about this vehicle.</p>
-                  <p className="modal-footer-phone">404-254-4131</p>
+                  <p className="modal-footer-phone">{PHONE_NUMBER}</p>
                 </div>
               </form>
             </div>

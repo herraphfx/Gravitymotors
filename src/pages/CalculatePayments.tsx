@@ -1,8 +1,11 @@
 import '../App.css'
 import { useState } from 'react'
+import { useNavigate } from 'react-router-dom'
 import Layout from '../components/Layout'
 
 function CalculatePayments() {
+  const navigate = useNavigate()
+
   // Calculate Payment calculator state
   const [paymentCalc, setPaymentCalc] = useState({
     vehiclePrice: '',
@@ -118,7 +121,7 @@ function CalculatePayments() {
         <div className="payments-intro">
           <h2>CONTACT US AT <a href="tel:404-254-4131" style={{color: '#8B7355', textDecoration: 'none'}}>404-254-4131</a> FOR MORE INFORMATION.</h2>
           <p>Or you can start the pre-approval process by using our online credit application</p>
-          <button className="btn-preapproved">Get Pre-Approved</button>
+          <button className="btn-preapproved" onClick={() => navigate('/get-pre-qualified')}>Get Pre-Approved</button>
         </div>
 
         <div className="calculators-container">

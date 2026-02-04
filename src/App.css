@@ -397,6 +397,7 @@ body {
   min-width: 350px;
   background-color: white;
   color: #666;
+  font-family: "Infiniti Brand Regular", Arial, sans-serif;
 }
 
 .search-inventory-btn {
@@ -504,6 +505,7 @@ body {
   min-width: 490px;
   background-color: white;
   color: #666;
+  font-family: "Infiniti Brand Regular", Arial, sans-serif;
 }
 
 /* Featured Vehicles */
@@ -1018,6 +1020,11 @@ body {
     display: none;
   }
 
+  /* Hide automotive parts sidebar on mobile */
+  .parts-sidebar {
+    display: none !important;
+  }
+
   /* Make inventory layout single column on mobile */
   .inventory-layout {
     grid-template-columns: 1fr;
@@ -1096,7 +1103,7 @@ body {
 }
 
 .page-hero {
-  background: linear-gradient(135deg, #8B7355 0%, #9B8B7E 100%);
+  background: linear-gradient(135deg, #E31E24 0%, #C41A1F 100%);
   color: white;
   padding: 80px 20px;
   text-align: center;
@@ -1320,7 +1327,7 @@ body {
 
 .btn-submit {
   width: 100%;
-  background-color: #8B7355;
+  background-color: #e31e24;
   color: white;
   border: none;
   padding: 15px;
@@ -1333,7 +1340,7 @@ body {
 }
 
 .btn-submit:hover {
-  background-color: #7a6349;
+  background-color: #c41a1f;
 }
 
 .info-section {
@@ -2594,8 +2601,13 @@ body {
 .phone-number {
   font-size: 18px;
   font-weight: bold;
-  color: #333;
+  color: #0066CC;
   margin-top: 5px;
+}
+
+/* ViewAll page phone number - blue color */
+.inventory-page .phone-number {
+  color: #0066CC !important;
 }
 
 .action-buttons {
@@ -2867,14 +2879,14 @@ body {
 .services-header {
   text-align: center;
   padding: 40px 20px;
-  background-color: white;
+  background-color: #f5f5f5;
   margin-bottom: 30px;
   border-radius: 4px;
 }
 
 .services-header h1 {
   font-size: 32px;
-  color: #8B7355;
+  color: #000000;
   font-weight: normal;
   letter-spacing: 2px;
 }
@@ -2903,7 +2915,7 @@ body {
 
 .services-list-section h2 {
   font-size: 18px;
-  color: #8B7355;
+  color: #000000;
   font-weight: bold;
   margin-bottom: 20px;
   letter-spacing: 1px;
@@ -3409,7 +3421,7 @@ body {
 .trade-page-header {
   text-align: center;
   padding: 40px 20px;
-  background-color: white;
+  background-color: #f5f5f5;
   margin-bottom: 30px;
   border-radius: 4px;
 }
@@ -3464,7 +3476,7 @@ body {
 
 .section-title-trade {
   font-size: 16px;
-  color: #8B7355;
+  color: #000000;
   font-weight: bold;
   margin-bottom: 25px;
   letter-spacing: 1px;
@@ -3557,14 +3569,14 @@ body {
 .payments-header {
   text-align: center;
   padding: 40px 20px;
-  background-color: white;
+  background-color: #f5f5f5;
   margin-bottom: 30px;
   border-radius: 4px;
 }
 
 .payments-header h1 {
   font-size: 32px;
-  color: #8B7355;
+  color: #000000;
   font-weight: normal;
   letter-spacing: 2px;
 }
@@ -3623,7 +3635,7 @@ body {
 
 .calculator-title {
   font-size: 18px;
-  color: #8B7355;
+  color: #000000;
   font-weight: bold;
   margin-bottom: 15px;
   letter-spacing: 1px;
@@ -4821,8 +4833,7 @@ body {
   }
 
   .parts-sidebar {
-    border-right: none;
-    border-bottom: 1px solid #e0e0e0;
+    display: none !important;
   }
 
   .list-view .parts-product-card {
