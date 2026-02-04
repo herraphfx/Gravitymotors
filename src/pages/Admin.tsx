@@ -1,8 +1,10 @@
 import { useState } from 'react'
+import { useNavigate } from 'react-router-dom'
 import Layout from '../components/Layout'
 import '../styles/Admin.css'
 
 function Admin() {
+  const navigate = useNavigate()
   const [activeTab, setActiveTab] = useState<'vehicles' | 'accessories'>('vehicles')
   const [vehicles] = useState([])
   const [accessories] = useState([])
@@ -110,12 +112,12 @@ function Admin() {
 
           <div className="admin-add-buttons">
             {activeTab === 'vehicles' ? (
-              <button className="admin-add-btn admin-add-vehicle">
+              <button className="admin-add-btn admin-add-vehicle" onClick={() => navigate('/add-new-vehicle')}>
                 <span className="add-icon">+</span>
                 Add Vehicle
               </button>
             ) : (
-              <button className="admin-add-btn admin-add-accessory">
+              <button className="admin-add-btn admin-add-accessory" onClick={() => navigate('/add-new-accessory')}>
                 <span className="add-icon">+</span>
                 Add Accessory
               </button>
@@ -128,7 +130,7 @@ function Admin() {
                 <div className="empty-icon">🚗</div>
                 <h3 className="empty-title">No vehicles listed</h3>
                 <p className="empty-text">Start selling by adding your first vehicle listing.</p>
-                <button className="empty-add-btn">Add Vehicle</button>
+                <button className="empty-add-btn" onClick={() => navigate('/add-new-vehicle')}>Add Vehicle</button>
               </div>
             )}
 
@@ -137,7 +139,7 @@ function Admin() {
                 <div className="empty-icon">📦</div>
                 <h3 className="empty-title">No accessories listed</h3>
                 <p className="empty-text">Start selling by adding your first accessory listing.</p>
-                <button className="empty-add-btn">Add Accessory</button>
+                <button className="empty-add-btn" onClick={() => navigate('/add-new-accessory')}>Add Accessory</button>
               </div>
             )}
           </div>
