@@ -239,10 +239,10 @@ function Layout({ children }: LayoutProps) {
 
       {/* Sidebar Buttons */}
       <div className="sidebar-buttons">
-        <button className="sidebar-btn sidebar-phone" title="Call Us">📱</button>
-        <button className="sidebar-btn sidebar-email" title="Email Us">✉️</button>
+        <a href="tel:404-254-4131" className="sidebar-btn sidebar-phone" title="Call Us">📱</a>
+        <a href="mailto:gravity.motor@yahoo.com" className="sidebar-btn sidebar-email" title="Email Us">✉️</a>
         <button className="sidebar-btn sidebar-location" title="Location">📍</button>
-        <button className="sidebar-btn sidebar-contact" title="Contact">💬</button>
+        <Link to="/about-us" className="sidebar-btn sidebar-contact" title="Contact">💬</Link>
       </div>
     </div>
   )

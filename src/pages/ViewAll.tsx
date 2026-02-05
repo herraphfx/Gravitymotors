@@ -13,6 +13,9 @@ function ViewAll() {
   const [showModal, setShowModal] = useState(false)
   const [showTestDriveModal, setShowTestDriveModal] = useState(false)
   const [selectedVehicle, setSelectedVehicle] = useState<any>(null)
+  const [sortBy, setSortBy] = useState('Best Match')
+  const [showSortDropdown, setShowSortDropdown] = useState(false)
+  const [showRefineSearch, setShowRefineSearch] = useState(false)
   const [formData, setFormData] = useState({
     firstName: '',
     lastName: '',
@@ -262,15 +265,190 @@ function ViewAll() {
         </div>
 
         <div className="inventory-sort">
-          <span>Sort By:</span>
-          <button className="sort-btn">Best Match</button>
-          <button className="sort-btn">Model</button>
-          <button className="sort-btn">Mileage</button>
-          <button className="sort-btn">Price</button>
-          <button className="sort-btn">Photos</button>
+          <button 
+            className="refine-search-btn" 
+            onClick={() => setShowRefineSearch(!showRefineSearch)}
+          >
+            <span className="filter-icon">▼</span> Refine Search
+          </button>
+          <div className="sort-dropdown-container">
+            <button 
+              className="sort-dropdown-btn" 
+              onClick={() => setShowSortDropdown(!showSortDropdown)}
+            >
+              <span className="sort-icon">⇅</span> Sort By
+            </button>
+            {showSortDropdown && (
+              <div className="sort-dropdown-menu">
+                <button 
+                  className="sort-dropdown-item" 
+                  onClick={() => {
+                    setSortBy('Best Match')
+                    setShowSortDropdown(false)
+                  }}
+                >
+                  Best Match
+                </button>
+                <button 
+                  className="sort-dropdown-item" 
+                  onClick={() => {
+                    setSortBy('Model')
+                    setShowSortDropdown(false)
+                  }}
+                >
+                  Model
+                </button>
+                <button 
+                  className="sort-dropdown-item" 
+                  onClick={() => {
+                    setSortBy('Mileage')
+                    setShowSortDropdown(false)
+                  }}
+                >
+                  Mileage
+                </button>
+                <button 
+                  className="sort-dropdown-item" 
+                  onClick={() => {
+                    setSortBy('Price')
+                    setShowSortDropdown(false)
+                  }}
+                >
+                  Price
+                </button>
+                <button 
+                  className="sort-dropdown-item" 
+                  onClick={() => {
+                    setSortBy('Photos')
+                    setShowSortDropdown(false)
+                  }}
+                >
+                  Photos
+                </button>
+              </div>
+            )}
+          </div>
         </div>
 
         <div className="inventory-layout">
+          {/* Mobile Filter Modal */}
+          {showRefineSearch && (
+            <div className="mobile-filter-modal-overlay" onClick={() => setShowRefineSearch(false)}>
+              <div className="mobile-filter-modal" onClick={(e) => e.stopPropagation()}>
+                <div className="mobile-filter-header">
+                  <h2>Refine Your Search</h2>
+                  <button className="mobile-filter-close" onClick={() => setShowRefineSearch(false)}>×</button>
+                </div>
+                <div className="mobile-filter-content">
+                  <div className="filter-section">
+                    <h3>YOUR CURRENT SEARCH</h3>
+                    <div className="current-search">
+                      <p><strong>Condition:</strong> Used</p>
+                    </div>
+                  </div>
+
+                  <div className="filter-section">
+                    <h3>REFINE YOUR SEARCH</h3>
+                    
+                    <div className="filter-group">
+                      <h4>Make</h4>
+                      <div className="checkbox-list">
+                        {['Acura', 'Alfa Romeo', 'Audi', 'BMW', 'Buick', 'Cadillac', 'Chevrolet', 'Chrysler', 'Dodge', 'FIAT', 'Ford', 'Genesis', 'GMC', 'Honda', 'Hyundai', 'INFINITI', 'Jaguar', 'Jeep', 'Kia', 'Land Rover', 'Lexus', 'Lincoln', 'Maserati', 'Mazda', 'Mercedes-Benz', 'MINI', 'Mitsubishi', 'Nissan', 'Porsche', 'Ram', 'Subaru', 'Tesla', 'Toyota', 'Volkswagen', 'Volvo'].map(make => (
+                          <label key={make} className="checkbox-label">
+                            <input type="checkbox" /> {make}
+                          </label>
+                        ))}
+                      </div>
+                    </div>
+
+                    <div className="filter-group">
+                      <h4>Price</h4>
+                      <div className="range-inputs">
+                        <input type="number" placeholder="Min" className="range-input" />
+                        <span>to</span>
+                        <input type="number" placeholder="Max" className="range-input" />
+                      </div>
+                      <button className="apply-btn">Apply</button>
+                    </div>
+
+                    <div className="filter-group">
+                      <h4>Body Style</h4>
+                      <div className="checkbox-list">
+                        <label className="checkbox-label"><input type="checkbox" /> Convertible</label>
+                        <label className="checkbox-label"><input type="checkbox" /> Coupe</label>
+                        <label className="checkbox-label"><input type="checkbox" /> Hatchback</label>
+                        <label className="checkbox-label"><input type="checkbox" /> Sedan</label>
+                        <label className="checkbox-label"><input type="checkbox" /> SUV</label>
+                        <label className="checkbox-label"><input type="checkbox" /> Truck</label>
+                        <label className="checkbox-label"><input type="checkbox" /> Van/Minivan</label>
+                        <label className="checkbox-label"><input type="checkbox" /> Wagon</label>
+                      </div>
+                    </div>
+
+                    <div className="filter-group">
+                      <h4>Mileage</h4>
+                      <div className="range-inputs">
+                        <input type="number" placeholder="Min" className="range-input" />
+                        <span>to</span>
+                        <input type="number" placeholder="Max" className="range-input" />
+                      </div>
+                      <button className="apply-btn">Apply</button>
+                    </div>
+
+                    <div className="filter-group">
+                      <h4>Transmission</h4>
+                      <div className="checkbox-list">
+                        <label className="checkbox-label"><input type="checkbox" /> Automatic</label>
+                        <label className="checkbox-label"><input type="checkbox" /> Manual</label>
+                      </div>
+                    </div>
+
+                    <div className="filter-group">
+                      <h4>Drivetrain</h4>
+                      <div className="checkbox-list">
+                        <label className="checkbox-label"><input type="checkbox" /> AWD/4WD</label>
+                        <label className="checkbox-label"><input type="checkbox" /> FWD</label>
+                        <label className="checkbox-label"><input type="checkbox" /> RWD</label>
+                      </div>
+                    </div>
+
+                    <div className="filter-group">
+                      <h4>Fuel Type</h4>
+                      <div className="checkbox-list">
+                        <label className="checkbox-label"><input type="checkbox" /> Diesel</label>
+                        <label className="checkbox-label"><input type="checkbox" /> Electric</label>
+                        <label className="checkbox-label"><input type="checkbox" /> Flex Fuel</label>
+                        <label className="checkbox-label"><input type="checkbox" /> Gasoline</label>
+                        <label className="checkbox-label"><input type="checkbox" /> Hybrid</label>
+                        <label className="checkbox-label"><input type="checkbox" /> Not Specified</label>
+                      </div>
+                    </div>
+
+                    <div className="filter-group">
+                      <h4>Exterior Color</h4>
+                      <div className="checkbox-list">
+                        <label className="checkbox-label"><input type="checkbox" /> Beige</label>
+                        <label className="checkbox-label"><input type="checkbox" /> Black</label>
+                        <label className="checkbox-label"><input type="checkbox" /> Blue</label>
+                        <label className="checkbox-label"><input type="checkbox" /> Brown</label>
+                        <label className="checkbox-label"><input type="checkbox" /> Gold</label>
+                        <label className="checkbox-label"><input type="checkbox" /> Gray</label>
+                        <label className="checkbox-label"><input type="checkbox" /> Green</label>
+                        <label className="checkbox-label"><input type="checkbox" /> Orange</label>
+                        <label className="checkbox-label"><input type="checkbox" /> Red</label>
+                        <label className="checkbox-label"><input type="checkbox" /> Silver</label>
+                        <label className="checkbox-label"><input type="checkbox" /> White</label>
+                        <label className="checkbox-label"><input type="checkbox" /> Yellow</label>
+                      </div>
+                    </div>
+                  </div>
+
+                  <button className="reset-filters-btn">Reset Search Filters</button>
+                </div>
+              </div>
+            </div>
+          )}
+
           {/* Sidebar Filters */}
           <aside className="inventory-sidebar">
             <div className="filter-section">
