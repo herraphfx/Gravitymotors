@@ -9,12 +9,74 @@ function App() {
   const [isMobileInventoryOpen, setIsMobileInventoryOpen] = useState(false)
   const [isMobileFinanceOpen, setIsMobileFinanceOpen] = useState(false)
   const [currentDay, setCurrentDay] = useState('')
+  const [isSidebarSticky, setIsSidebarSticky] = useState(false)
+  const [isNavSticky, setIsNavSticky] = useState(false)
+  const [navOffsetTop, setNavOffsetTop] = useState(0)
 
   // Detect current day
   useEffect(() => {
     const days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday']
     const today = new Date().getDay()
     setCurrentDay(days[today])
+  }, [])
+
+  // Sticky Navigation using offsetHeight
+  useEffect(() => {
+    const handleStickyNav = () => {
+      const nav = document.querySelector('.main-nav') as HTMLElement
+      const topSearchBar = document.querySelector('.top-search-bar') as HTMLElement
+      const topHeader = document.querySelector('.top-header') as HTMLElement
+      
+      if (nav && topSearchBar && topHeader) {
+        // Calculate the offset position where nav should become sticky
+        const offsetTop = topSearchBar.offsetHeight + topHeader.offsetHeight
+        
+        // Store the offset position
+        if (navOffsetTop === 0) {
+          setNavOffsetTop(offsetTop)
+        }
+        
+        // Check if we've scrolled past the navigation's original position
+        if (window.pageYOffset >= offsetTop) {
+          setIsNavSticky(true)
+        } else {
+          setIsNavSticky(false)
+        }
+      }
+    }
+
+    // Set initial offset on mount
+    handleStickyNav()
+
+    // Add scroll event listener
+    window.addEventListener('scroll', handleStickyNav)
+    window.addEventListener('resize', handleStickyNav)
+
+    return () => {
+      window.removeEventListener('scroll', handleStickyNav)
+      window.removeEventListener('resize', handleStickyNav)
+    }
+  }, [navOffsetTop])
+
+  // Handle sidebar sticky behavior - always sticky on mobile
+  useEffect(() => {
+    const checkMobileView = () => {
+      if (window.innerWidth <= 768) {
+        setIsSidebarSticky(true)
+      } else {
+        setIsSidebarSticky(false)
+      }
+    }
+
+    // Check on mount
+    checkMobileView()
+
+    // Check on resize
+    window.addEventListener('resize', checkMobileView)
+
+    return () => {
+      window.removeEventListener('resize', checkMobileView)
+    }
   }, [])
 
   // Helper function to check if a day is today
@@ -91,7 +153,7 @@ function App() {
       </button>
 
       {/* Main Navigation */}
-      <nav className="main-nav">
+      <nav className={`main-nav ${isNavSticky ? 'sticky-nav' : ''}`}>
         <Link to="/" className="nav-link">HOME</Link>
         <div 
           className="nav-dropdown"
@@ -396,7 +458,7 @@ function App() {
       </div>
 
       {/* Sidebar Buttons */}
-      <div className="sidebar-buttons">
+      <div className={`sidebar-buttons ${isSidebarSticky ? 'sticky' : ''}`}>
         <button className="sidebar-btn sidebar-phone" title="Call Us">📱</button>
         <button className="sidebar-btn sidebar-email" title="Email Us">✉️</button>
         <button className="sidebar-btn sidebar-location" title="Location">📍</button>
