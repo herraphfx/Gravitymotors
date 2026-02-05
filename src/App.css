@@ -76,6 +76,13 @@ body {
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
+  text-decoration: none;
+  cursor: pointer;
+  transition: opacity 0.3s ease;
+}
+
+.logo-section:hover {
+  opacity: 0.8;
 }
 
 .company-logo {

@@ -133,10 +133,10 @@ function App() {
       {/* Header Section */}
       <header className="top-header">
         <div className="header-container">
-          <div className="logo-section">
+          <Link to="/" className="logo-section">
             <img src="/gravity-motors-logo.png.png" alt="Gravity Motors Logo" className="company-logo" />
             <h1 className="company-name">Gravity Motors</h1>
-          </div>
+          </Link>
           <div className="address-info">
             <p className="address-line">4040 Jonesboro Road</p>
             <p className="address-line">Forest Park, GA 30297 📍 Map</p>
